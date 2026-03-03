@@ -1,1 +1,11 @@
-/* css styles */
+/* Remove box/frame around social icons */
+.quarto-about-trestles .about-link {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Make icons larger */
+.about-links .bi {
+  font-size: 1.6rem;
