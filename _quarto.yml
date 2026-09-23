@@ -18,7 +18,7 @@ website:
 format:
   html:
     theme: default
-    css: styles.css
+    css: site.css
     toc: false
     section-divs: false
     pagetitle: "Axel Schneider"
