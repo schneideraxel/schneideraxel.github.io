@@ -21,7 +21,7 @@ format:
     css: site.css
     toc: false
     section-divs: false
-    pagetitle: "Development Economist at Cornell University"
+    pagetitle: "Axel Schneider"
     anchor-sections: false
     smooth-scroll: true
     include-in-header:
