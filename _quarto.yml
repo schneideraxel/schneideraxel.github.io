@@ -21,6 +21,34 @@ format:
     css: site.css
     toc: false
     section-divs: false
-    pagetitle: "Axel Schneider"
+    pagetitle: "Development Economist at Cornell University"
     anchor-sections: false
     smooth-scroll: true
+    include-in-header:
+      text: |
+        <link rel="canonical" href="https://schneideraxel.github.io/">
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "url": "https://schneideraxel.github.io/",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Axel Schneider",
+            "url": "https://schneideraxel.github.io/",
+            "image": "https://schneideraxel.github.io/axel.jpg",
+            "jobTitle": "Predoctoral Research Fellow",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Cornell University",
+              "url": "https://www.cornell.edu/"
+            },
+            "sameAs": [
+              "https://github.com/schneideraxel",
+              "https://linkedin.com/in/axel-schneider-1798492ba",
+              "https://business.cornell.edu/centers/cider/predocs/",
+              "https://logri.org/fr/profile/schneider-axel/"
+            ]
+          }
+        }
+        </script>
