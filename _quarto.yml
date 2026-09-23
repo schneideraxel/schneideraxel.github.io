@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+
+website:
+  title: "Axel Schneider"
+  site-url: https://schneideraxel.github.io
+  description: "Axel Schneider is a predoctoral researcher at Cornell University with research interests in development economics and network theory."
+  open-graph: true
+  twitter-card: true
+  search: false
+  page-footer:
+    left: "© 2026 Axel Schneider"
+    right: "Built with [Quarto](https://quarto.org/)."
+
+format:
+  html:
+    theme: default
+    css: styles.css
+    toc: false
+    section-divs: false
+    pagetitle: "Axel Schneider"
+    anchor-sections: false
+    smooth-scroll: true
