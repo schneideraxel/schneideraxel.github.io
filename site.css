@@ -62,7 +62,7 @@ a:hover { color: #666; }
 }
 @media (max-width: 480px) {
   .research-item summary { grid-template-columns: 14px minmax(0, 1fr) 14px; }
-  .research-item .item-year { grid-column: 2; grid-row: 2; margin: 2px 0 0; }
+  .research-item summary .item-year { grid-column: 2; grid-row: 2; margin: 2px 0 0; }
   .item-meta { grid-column: 2; grid-row: 3; }
   .research-item summary::after { grid-column: 3; }
 }
