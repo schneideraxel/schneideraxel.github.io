@@ -4,27 +4,6 @@
     "href": "index.html",
     "title": "Axel Schneider",
     "section": "",
-    "text": "I am a predoctoral researcher at Cornell University where I work with Christopher B. Barrett and Jenny C. Aker. My research in applied economics lies at the intersection of development economics and network theory.\nBefore that, I was a field-based predoctoral researcher at the Local Government Revenue Initiative (LoGRI) at the University of Toronto, working with Wilson Prichard. My work there centered around political economy and tax systems, and I supported the implementation of tax reforms.\nMy work has taken me to Sierra Leone, Togo, Kenya, and Senegal, where I have conducted field research."
-  },
-  {
-    "objectID": "index.html#research",
-    "href": "index.html#research",
-    "title": "Axel Schneider",
-    "section": "Research",
-    "text": "Research\nComing soon"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Axel Schneider",
-    "section": "Experience",
-    "text": "Experience\nPredoctoral Research Fellow, Cornell University (CIDER) 2025-now\nPredoctoral Research Fellow, University of Toronto (LoGRI) 2023-2025\nShort-Term Consultant, World Bank (Development Research Group) 2025"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Axel Schneider",
-    "section": "Education",
-    "text": "Education\nMaster of Science in Economics, University of Lausanne 2022 Thesis supervised by Bettina Klaus\nBachelor of Science in Economics, University of Lausanne 2019"
+    "text": "Axel Schneider\nPredoctoral researcherCornell University\n\n  Email\n  LinkedIn\n  GitHub\n\n\n\n\nAbout me\nI’m currently a predoctoral fellow at Cornell University, working with Christopher B. Barrett and Jenny C. Aker. I’m a development economist interested in how data fusion, alternative data sources, and AI can open up new ways to study development.\nBefore Cornell, I worked with Wilson Prichard at the University of Toronto’s Local Government Revenue Initiative (LoGRI), where I supported research and the implementation of property tax reforms. Along the way, I’ve conducted fieldwork in Sierra Leone, Togo, Kenya, and Senegal.\n\n\nResearch\n\n\n\nClimate, Mobility and Conflict: The Micro-Dynamics of Farmer-Herder Conflicts in the Sahel2026With Jenny C. Aker and Maarten Voors · Draft in progress\n\nWe combine repeated village and household surveys from 180 villages in Niger with rainfall, vegetation, and geospatial data to document when and where farmer–herder conflicts occur. We focus on how seasonal mobility, access to forage and farmland, and local coordination mechanisms shape conflict risk.\n\n\n\nPredicting Child Schistosomiasis Infection with Survey Data2026With Christopher B. Barrett, Faraz Usmani, Molly Doruska, and Jason Rohr · Research in progress\n\nWe link three rounds of individual, household, and village survey data to parasitological test results for two forms of schistosomiasis. Using random forests, we ask how small a practical set of survey questions can predict infection and how performance changes across villages, over time, and as survey information becomes older.\n\n\n\nDigital Traces, Social Networks, and Tax Compliance in Sierra Leone2026Early-stage project\n\nThis early-stage project asks how the effects of tax sensitization and enforcement diffuse through social networks in Sierra Leone. It explores using machine learning to infer ties from mobile-phone communication patterns, then linking network exposure to randomized outreach and the timing of tax payments.\n\n\n\nEfficiency of a Simplified Method of Property Tax Identification and Valuation2026With Camille Barras, Nicolas Orgeira Pillai, Adèle Somat, Zoé Baudoin, and Evan Trowbridge · Draft in progress\n\nWe compare implementations of simplified property identification and valuation across five African countries, drawing on remote mapping, field survey, and expert valuation data. The brief documents the time and cost of each stage and examines how imagery quality, survey design, scale, and local conditions affect efficiency.\n\n\n\n\nExperience\n\nPredoctoral Research Fellow 2025–present\nCornell University · CIDER\nShort-Term Consultant 2025\nWorld Bank · Development Research Group\nPredoctoral Research Fellow 2023–2025\nUniversity of Toronto · LoGRI\n\n\n\nEducation\n\nMSc in Economics 2022\nUniversity of Lausanne\nThesis supervised by Bettina Klaus.\nBSc in Economics 2019\nUniversity of Lausanne\n\n\n\nCode\n\nI build small, reusable tools for common research tasks and share them on GitHub:\nremote-sensor Last updated…\nDownloads rainfall and satellite vegetation measurements for selected areas and dates from CHIRPS, Sentinel-2, and MODIS.\nfield-coordinator-bot Last updated…\nRuns data-checking scripts and sends flagged cases to GitHub Issues and Projects for fieldwork follow-up.\nxlsform-translator Last updated…\nAdds translated language columns to XLSForm surveys while preserving variable references and HTML tags."
   }
 ]
