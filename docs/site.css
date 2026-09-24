@@ -1,65 +1,370 @@
+/*
+  SITE STYLES
+
+  Contents
+  1. Design settings
+  2. Global defaults
+  3. Page layout
+  4. Profile sidebar
+  5. Content and headings
+  6. Standard section items
+  7. Research items
+  8. Footer
+  9. Mobile layout
+  10. Print layout
+
+  For routine design changes, edit the variables in section 1. The numbered
+  sections below control structure and should rarely need adjustment.
+*/
+
+/* ========================================================================== 
+   1. DESIGN SETTINGS
+   ========================================================================== */
 :root {
-  --bs-body-bg: #fff;
-  --bs-body-color: #111;
-  --bs-link-color: #111;
+  /* Colors */
+  --color-background: #fff;
+  --color-text: #111;
+  --color-muted: #555;
+  --color-marker: #777;
+  --color-rule: #ccc;
+  --color-description-rule: #bbb;
+  --color-description-text: #333;
+  --color-link-hover: #666;
+
+  /* Page dimensions */
+  --page-width: 1040px;
+  --reading-width: 720px;
+  --description-width: 650px;
+  --page-padding-x: 20px;
+  --page-padding-bottom: 24px;
+  --page-top-space: 30px;
+
+  /* Main two-column layout */
+  --sidebar-width: 160px;
+  --column-gap: 34px;
+
+  /* Typography */
+  --font-size-body: 14px;
+  --font-size-small: 12px;
+  --font-size-sidebar: 13px;
+  --font-size-name: 19px;
+  --font-size-section: 17px;
+  --line-height-body: 1.55;
+  --line-height-item: 1.4;
+
+  /* Repeated item spacing */
+  --item-indent: 14px;
+  --section-gap: 16px;
+  --item-gap: 7px;
+
+  /* Portrait sizes */
+  --portrait-size: 140px;
+  --portrait-size-mobile: 110px;
+
+  /* Keep Quarto and Bootstrap colors consistent with the page */
+  --bs-body-bg: var(--color-background);
+  --bs-body-color: var(--color-text);
+  --bs-link-color: var(--color-text);
   --bs-link-hover-color: #000;
 }
-body { background: #fff; color: #111; font-size: 14px; }
-#quarto-content { display: block; }
-main.content { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 20px 24px; }
-#title-block-header:empty { display: none; }
-a { color: #111; text-decoration: underline; text-underline-offset: 3px; }
-a:hover { color: #666; }
-.site-layout { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 34px; align-items: start; margin-top: 30px; }
-.site-layout > * { min-width: 0; }
-.profile-sidebar { font-size: 13px; }
-.portrait { display: block; width: 140px; height: 140px; object-fit: cover; border-radius: 50%; }
-.profile-sidebar h1 { font-size: 19px; font-weight: 400; margin: 10px 0 3px; }
-.profile-affiliation { color: #555; line-height: 1.5; }
-.profile-links { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; margin-top: 8px; }
-.reading-column { max-width: 720px; line-height: 1.55; }
-.biography > p { margin-bottom: 6px; }
-.section-grid { margin-top: 16px; }
-.reading-column h2 { font-size: 17px; font-weight: 700; margin: 0 0 7px; padding-bottom: 3px; border-bottom: 1px solid #ccc; }
-.reading-column h3 { font-size: 14px; font-weight: 400; line-height: 1.4; margin: 0 0 4px; }
-.section-body h3 { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding-left: 14px; }
-.section-body h3::before { content: "•"; position: absolute; left: 0; color: #777; }
-.section-body h3:not(:first-of-type) { margin-top: 7px; }
-.section-body h3 + p { color: #555; font-size: 12px; margin-bottom: 6px; }
-.section-body h3 + p, #education h3 + p + p { margin-left: 14px; }
-.section-body h3 + p em { font-style: normal; }
-.research-item { margin-bottom: 7px; }
-.research-item summary { display: grid; grid-template-columns: 14px minmax(0, 1fr) auto; color: #111; cursor: pointer; list-style: none; }
-.research-item summary::-webkit-details-marker { display: none; }
-.research-item summary::before { content: "+"; grid-column: 1; grid-row: 1 / span 2; color: #111; font-size: 14px; line-height: 1.4; }
-.research-item[open] summary::before { content: "−"; }
-.item-title { grid-column: 2; display: block; font-size: 14px; font-weight: 400; line-height: 1.4; }
-.item-year { color: #555; font-size: 12px; font-weight: 400; white-space: nowrap; }
-.research-item summary .item-year { grid-column: 3; margin-left: 10px; }
-.item-meta { grid-column: 2 / span 2; color: #555; font-size: 12px; line-height: 1.4; margin-top: 1px; }
-.research-item[open] summary { margin-bottom: 7px; }
-.research-item p {
-  max-width: 650px;
-  margin: 0 14px;
-  padding-left: 12px;
-  border-left: 1px solid #bbb;
-  color: #333;
-  font-size: 13px;
-  line-height: 1.55;
+
+/* ========================================================================== 
+   2. GLOBAL DEFAULTS
+   ========================================================================== */
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-size: var(--font-size-body);
 }
+
+/* Quarto normally constrains this container; the custom grid handles width here. */
+#quarto-content { display: block; }
+
+/* Hide Quarto's empty title container because the name lives in the sidebar. */
+#title-block-header:empty { display: none; }
+
+/* Links share one treatment throughout the page. */
+a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover { color: var(--color-link-hover); }
+
+/* ========================================================================== 
+   3. PAGE LAYOUT
+   Desktop uses a profile column and a reading column.
+   ========================================================================== */
+main.content {
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--page-padding-x) var(--page-padding-bottom);
+}
+
+.site-layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  gap: var(--column-gap);
+  align-items: start;
+  margin-top: var(--page-top-space);
+}
+
+/* Prevent long content from forcing either grid column beyond the page width. */
+.site-layout > * { min-width: 0; }
+
+/* ========================================================================== 
+   4. PROFILE SIDEBAR
+   ========================================================================== */
+.profile-sidebar { font-size: var(--font-size-sidebar); }
+
+.portrait {
+  display: block;
+  width: var(--portrait-size);
+  height: var(--portrait-size);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-sidebar h1 {
+  font-size: var(--font-size-name);
+  font-weight: 400;
+  margin: 10px 0 3px;
+}
+
+.profile-affiliation {
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+/* ========================================================================== 
+   5. CONTENT AND HEADINGS
+   ========================================================================== */
+.reading-column {
+  max-width: var(--reading-width);
+  line-height: var(--line-height-body);
+}
+
+.biography > p { margin-bottom: 6px; }
+.section-grid { margin-top: var(--section-gap); }
+
+/* Section headings */
+.reading-column h2 {
+  font-size: var(--font-size-section);
+  font-weight: 700;
+  margin: 0 0 7px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+/* All item titles remain regular weight; only section headings are bold. */
+.reading-column h3 {
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: var(--line-height-item);
+  margin: 0 0 4px;
+}
+
+/* ========================================================================== 
+   6. STANDARD SECTION ITEMS
+
+  Experience, Education, and Code items use a two-column title row.
+  The title fills the available width and the date stays aligned on the right.
+   ========================================================================== */
+.section-body h3 {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  padding-left: var(--item-indent);
+}
+
+.section-body h3::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-marker);
+}
+
+.section-body h3:not(:first-of-type) { margin-top: var(--item-gap); }
+
+/* Subtitles and code descriptions sit beneath and align with their item title. */
+.section-body h3 + p {
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+  margin-bottom: 6px;
+}
+
+.section-body h3 + p,
+#education h3 + p + p {
+  margin-left: var(--item-indent);
+}
+
+/* Markdown italics identify subtitles in the source but display as regular text. */
+.section-body h3 + p em { font-style: normal; }
+
+/* Small corrections for content structures unique to these two sections. */
 #education h3 + p + p { margin-bottom: 0; }
 #code > .section-body > p:first-child { margin-bottom: 14px; }
-.nav-footer { max-width: 1040px; margin: 0 auto; padding: 8px 20px 12px; background: #fff; color: #111; border: 0; font-size: 11px; }
-@media (max-width: 700px) {
-  main.content { padding: 0 20px 32px; }
-  .site-layout { grid-template-columns: 1fr; gap: 24px; }
-  .profile-sidebar { display: grid; grid-template-columns: 110px minmax(0, 1fr); column-gap: 18px; align-items: start; }
-  .profile-sidebar > p:first-child { grid-column: 1; grid-row: 1 / span 3; margin: 0; }
-  .portrait { width: 110px; height: 110px; }
-  .profile-sidebar h1 { margin-top: 0; }
-  .profile-links { grid-column: 2; flex-direction: row; flex-wrap: wrap; gap: 4px 14px; margin-top: 8px; }
+
+/* ========================================================================== 
+   7. RESEARCH ITEMS
+
+   Research entries are expandable. Their summary contains the disclosure
+   control, project title, date, authors, and status. The description appears
+   only when the entry is open.
+   ========================================================================== */
+.research-item { margin-bottom: var(--item-gap); }
+
+/*
+  Research uses three columns: expand control, title, and date.
+  The title can wrap while the date remains aligned with dates in other sections.
+*/
+.research-item summary {
+  display: grid;
+  grid-template-columns: var(--item-indent) minmax(0, 1fr) auto;
+  color: var(--color-text);
+  cursor: pointer;
+  list-style: none;
 }
+
+/* Remove the browser's native disclosure triangle. */
+.research-item summary::-webkit-details-marker { display: none; }
+
+/* The custom plus/minus also serves as the research item marker. */
+.research-item summary::before {
+  content: "+";
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  color: var(--color-text);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-item);
+}
+
+.research-item[open] summary::before { content: "−"; }
+
+.item-title {
+  grid-column: 2;
+  display: block;
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: var(--line-height-item);
+}
+
+/* Shared date style for Research, Experience, Education, and Code. */
+.item-year {
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.research-item summary .item-year {
+  grid-column: 3;
+  margin-left: 10px;
+}
+
+/* Authors and project status occupy the full width beneath the title and date. */
+.item-meta {
+  grid-column: 2 / span 2;
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-item);
+  margin-top: 1px;
+}
+
+.research-item[open] summary { margin-bottom: 7px; }
+
+/*
+  Expanded descriptions are inset to distinguish them from the summary.
+  The short vertical rule belongs only to the open description, not the item list.
+*/
+.research-item p {
+  max-width: var(--description-width);
+  margin: 0 var(--item-indent);
+  padding-left: 12px;
+  border-left: 1px solid var(--color-description-rule);
+  color: var(--color-description-text);
+  font-size: var(--font-size-sidebar);
+  line-height: var(--line-height-body);
+}
+
+/* ========================================================================== 
+   8. FOOTER
+   The footer stays plain and continuous with the page background.
+   ========================================================================== */
+.nav-footer {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 8px var(--page-padding-x) 12px;
+  background: var(--color-background);
+  color: var(--color-text);
+  border: 0;
+  font-size: 11px;
+}
+
+/* ========================================================================== 
+   9. MOBILE LAYOUT
+
+   The profile becomes a compact image-and-text grid above the reading column.
+   Content and research items keep the same internal alignment as desktop.
+   ========================================================================== */
+@media (max-width: 700px) {
+  main.content { padding: 0 var(--page-padding-x) 32px; }
+
+  .site-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .profile-sidebar {
+    display: grid;
+    grid-template-columns: var(--portrait-size-mobile) minmax(0, 1fr);
+    column-gap: 18px;
+    align-items: start;
+  }
+
+  /* Keep the portrait in the first column beside all profile text. */
+  .profile-sidebar > p:first-child {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    margin: 0;
+  }
+
+  .portrait {
+    width: var(--portrait-size-mobile);
+    height: var(--portrait-size-mobile);
+  }
+
+  .profile-sidebar h1 { margin-top: 0; }
+
+  .profile-links {
+    grid-column: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    margin-top: 8px;
+  }
+}
+
+/* ========================================================================== 
+   10. PRINT LAYOUT
+   Remove screen-only spacing and the footer.
+   ========================================================================== */
 @media print {
-  main.content { padding: 0; max-width: none; }
+  main.content {
+    padding: 0;
+    max-width: none;
+  }
+
   .nav-footer { display: none; }
 }
