@@ -1,7 +1,6 @@
 ---
 image: "axel.jpg"
 image-alt: "Portrait of Axel Schneider"
-description: "Axel Schneider is a predoctoral researcher at Cornell University and a development economist studying how data fusion, alternative data sources, and AI can open new ways to study development."
 page-layout: full
 ---
 
@@ -26,9 +25,11 @@ page-layout: full
 ::: {#about .biography}
 ## About me
 
-I’m currently a predoctoral fellow at [Cornell University](https://business.cornell.edu/centers/cider/predocs/), working with [Christopher B. Barrett](https://barrett.dyson.cornell.edu/) and [Jenny C. Aker](https://cals.cornell.edu/people/jenny-aker). I’m a development economist interested in how data fusion, alternative data sources, and AI can open up new ways to study development.
+I’m currently a predoctoral fellow at [Cornell University](https://business.cornell.edu/centers/cider/predocs/), working with [Christopher B. Barrett](https://barrett.dyson.cornell.edu/) and [Jenny C. Aker](https://cals.cornell.edu/people/jenny-aker). I’m a development economist interested in how data fusion, alternative data sources, and AI can open up new ways to study development and social networks.
 
-Before Cornell, I worked with [Wilson Prichard](https://munkschool.utoronto.ca/person/wilson-prichard) at the University of Toronto’s [Local Government Revenue Initiative (LoGRI)](https://logri.org/fr/profile/schneider-axel/), where I supported research and the implementation of property tax reforms. Along the way, I’ve conducted fieldwork in Sierra Leone, Togo, Kenya, and Senegal.
+Before Cornell, I worked with [Wilson Prichard](https://munkschool.utoronto.ca/person/wilson-prichard) at the University of Toronto’s [Local Government Revenue Initiative (LoGRI)](https://logri.org/fr/profile/schneider-axel/), where I supported research and the implementation of property tax reforms. 
+
+Along the way, I’ve conducted fieldwork in Sierra Leone, Togo, Kenya, and Senegal.
 :::
 
 ::: {.section-grid #research}
@@ -37,16 +38,16 @@ Before Cornell, I worked with [Wilson Prichard](https://munkschool.utoronto.ca/p
 ::: {.section-body}
 
 <details class="research-item">
-<summary><span class="item-title">Climate, Mobility and Conflict: The Micro-Dynamics of Farmer-Herder Conflicts in the Sahel</span><span class="item-year">2026</span><span class="item-meta">With Jenny C. Aker and Maarten Voors · Draft in progress</span></summary>
+<summary><span class="item-title">Climate, Mobility and Conflict: The Micro-Dynamics of Farmer-Herder Conflicts in the Sahel</span><span class="item-year">2026</span><span class="item-meta">With Jenny C. Aker and Maarten Voors · Draft submitted</span></summary>
 
 We combine repeated village and household surveys from 180 villages in Niger with rainfall, vegetation, and geospatial data to document when and where farmer–herder conflicts occur. We focus on how seasonal mobility, access to forage and farmland, and local coordination mechanisms shape conflict risk.
 
 </details>
 
 <details class="research-item">
-<summary><span class="item-title">Predicting Child Schistosomiasis Infection with Survey Data</span><span class="item-year">2026</span><span class="item-meta">With Christopher B. Barrett, Faraz Usmani, Molly Doruska, and Jason Rohr · Research in progress</span></summary>
+<summary><span class="item-title">Predicting Child Schistosomiasis Infection with Household Survey Data</span><span class="item-year">2026</span><span class="item-meta">With Christopher B. Barrett, Faraz Usmani, Molly Doruska, and Jason Rohr · Research in progress</span></summary>
 
-We link three rounds of individual, household, and village survey data to parasitological test results for two forms of schistosomiasis. Using random forests, we ask how small a practical set of survey questions can predict infection and how performance changes across villages, over time, and as survey information becomes older.
+We link three rounds of individual, household, and village survey data to parasitological test results for two forms of schistosomiasis. Using random forests, we ask how small a practical set of survey questions can predict infection and how performance changes across villages, and over time as survey information becomes older.
 
 </details>
 
@@ -58,9 +59,9 @@ This early-stage project asks how the effects of tax sensitization and enforceme
 </details>
 
 <details class="research-item">
-<summary><span class="item-title">Efficiency of a Simplified Method of Property Tax Identification and Valuation</span><span class="item-year">2026</span><span class="item-meta">With Camille Barras, Nicolas Orgeira Pillai, Adèle Somat, Zoé Baudoin, and Evan Trowbridge · Draft in progress</span></summary>
+<summary><span class="item-title">Efficiency of a Simplified Method of Property Tax Identification and Valuation</span><span class="item-year">2026</span><span class="item-meta">With Camille Barras, Nicolas Orgeira Pillai, Adèle Somat, Zoé Baudoin, and Evan Trowbridge · Draft submitted</span></summary>
 
-We compare implementations of simplified property identification and valuation across five African countries, drawing on remote mapping, field survey, and expert valuation data. The brief documents the time and cost of each stage and examines how imagery quality, survey design, scale, and local conditions affect efficiency.
+We compare implementations of simplified property identification and valuation across five African countries, drawing on remote mapping, field survey, and expert valuation data. The policy brief documents the time and cost of each stage and examines how imagery quality, survey design, scale, and local conditions affect efficiency.
 
 </details>
 
@@ -113,15 +114,15 @@ I build small, reusable tools for common research tasks and share them on GitHub
 
 ### [remote-sensor](https://github.com/schneideraxel/remote-sensor) [Last updated…]{.item-year .repo-updated data-repo="remote-sensor"}
 
-Downloads rainfall and satellite vegetation measurements for selected areas and dates from CHIRPS, Sentinel-2, and MODIS.
+Downloads rainfall and vegetation data for selected areas of interest and dates from CHIRPS, Sentinel-2, Landsat and MODIS.
 
 ### [field-coordinator-bot](https://github.com/schneideraxel/field-coordinator-bot) [Last updated…]{.item-year .repo-updated data-repo="field-coordinator-bot"}
 
-Runs data-checking scripts and sends flagged cases to GitHub Issues and Projects for fieldwork follow-up.
+Runs data-checking scripts (automatically, on demande or on webhook trigger) and sends flagged cases to GitHub as Issues and Projects item for live-monitoring and fieldwork follow-up.
 
 ### [xlsform-translator](https://github.com/schneideraxel/xlsform-translator) [Last updated…]{.item-year .repo-updated data-repo="xlsform-translator"}
 
-Adds translated language columns to XLSForm surveys while preserving variable references and HTML tags.
+Adds translated language columns to XLSForm surveys while preserving variable references and HTML tags. Uses LLMs through API calls.
 
 :::
 :::
