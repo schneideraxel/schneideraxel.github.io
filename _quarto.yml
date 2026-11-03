@@ -7,7 +7,7 @@ project:
 website:
   title: "Axel Schneider"
   site-url: https://schneideraxel.github.io
-  description: "Axel Schneider is a predoctoral researcher at Cornell University with research interests in development economics and network theory."
+  description: "Axel Schneider, predoctoral researcher at Cornell University. Development economics research using data fusion, alternative data sources, and machine learning."
   open-graph: true
   twitter-card: true
   search: false
