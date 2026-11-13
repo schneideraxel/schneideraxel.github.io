@@ -21,6 +21,8 @@
    1. DESIGN SETTINGS
    ========================================================================== */
 :root {
+  color-scheme: light;
+
   /* Colors */
   --color-background: #fff;
   --color-text: #111;
@@ -29,6 +31,7 @@
   --color-rule: #ccc;
   --color-description-rule: #bbb;
   --color-description-text: #333;
+  --color-link: var(--color-text);
   --color-link-hover: #666;
 
   /* Page dimensions */
@@ -64,8 +67,24 @@
   /* Keep Quarto and Bootstrap colors consistent with the page */
   --bs-body-bg: var(--color-background);
   --bs-body-color: var(--color-text);
-  --bs-link-color: var(--color-text);
-  --bs-link-hover-color: #000;
+  --bs-link-color: var(--color-link);
+  --bs-link-hover-color: var(--color-link-hover);
+}
+
+/* Follow the visitor's system preference; edit this palette to adjust dark mode. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-background: #1c1c1e;
+    --color-text: #f5f5f7;
+    --color-muted: #d1d1d6;
+    --color-marker: #aeaeb2;
+    --color-rule: #3a3a3c;
+    --color-description-rule: #636366;
+    --color-description-text: #e5e5ea;
+    --color-link: #70b7ff;
+    --color-link-hover: #a3d1ff;
+  }
 }
 
 /* ========================================================================== 
@@ -85,7 +104,7 @@ body {
 
 /* Links share one treatment throughout the page. */
 a {
-  color: var(--color-text);
+  color: var(--color-link);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
