@@ -26,7 +26,7 @@ page-layout: full
 ::: {#about .biography}
 ## About me
 
-I’m currently a predoctoral fellow at [Cornell University](https://business.cornell.edu/centers/cider/predocs/), working with [Christopher B. Barrett](https://barrett.dyson.cornell.edu/) and [Jenny C. Aker](https://cals.cornell.edu/people/jenny-aker). I’m a development economist interested in how data fusion, alternative data sources, and AI can open up new ways to study development and social networks.
+I’m currently a predoctoral fellow at [Cornell University](https://business.cornell.edu/centers/cider/predocs/), working with [Christopher B. Barrett](https://barrett.dyson.cornell.edu/) and [Jenny C. Aker](https://cals.cornell.edu/people/jenny-aker). I’m a development economist interested in how data fusion, alternative data sources, remote sensing, and AI can open up new ways to study development, social networks, and responses to environmental change.
 
 Before Cornell, I worked with [Wilson Prichard](https://munkschool.utoronto.ca/person/wilson-prichard) at the University of Toronto’s [Local Government Revenue Initiative (LoGRI)](https://logri.org/fr/profile/schneider-axel/), where I supported research and the implementation of property tax reforms. 
 
